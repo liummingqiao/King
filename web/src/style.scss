@@ -25,12 +25,18 @@ $colors: (
   "ligth": #f9f9f9,
   "grey": #999,
   "dark-1": #343440,
-  "dark": #222
+  "dark": #222,
+  "hui":#666
 );
 
 @each $colorKey, $color in $colors {
   .text-#{$colorKey} {
     color: $color;
+  }
+}
+@each $colorKey, $color in $colors {
+  .bg-#{$colorKey} {
+    background: $color;
   }
 }
 
@@ -43,6 +49,7 @@ $colors: (
 $base-fond-size: 1rem;
 
 $font-sizes: (
+  xxs:0.6154,
   xs: 0.7692,
   sm: 0.9231,
   md: 1,
@@ -55,7 +62,6 @@ $font-sizes: (
     font-size: $font-size * $base-fond-size;
   }
 }
-
 .d-flax {
   display: flex;
 }
@@ -87,7 +93,7 @@ $at: (
   stretch: stretch
 );
 @each $key, $value in $at {
-  .at-#{$key} {
+  .ai-#{$key} {
     align-items: $value;
   }
 }
@@ -114,9 +120,22 @@ $spacing-sizes: (
   5: 3
 );
 @each $typeKey, $type in $spacing-types {
+  //m-1
   @each $sizeKey, $size in $spacing-sizes {
     .#{$typeKey}-#{$sizeKey} {
       #{$type}: $size * $spacing-base-size;
+    }
+  }
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typeKey}x-#{$sizeKey} {
+      #{$type}-left: $size * $spacing-base-size;
+      #{$type}-right: $size * $spacing-base-size;
+    }
+  }
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typeKey}y-#{$sizeKey} {
+      #{$type}-top: $size * $spacing-base-size;
+      #{$type}-bottom: $size * $spacing-base-size;
     }
   }
   @each $directionKey, $direction in $spacing-directions {
