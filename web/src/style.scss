@@ -26,7 +26,7 @@ $colors: (
   "grey": #999,
   "dark-1": #343440,
   "dark": #222,
-  "hui":#666
+  "hui": #666
 );
 
 @each $colorKey, $color in $colors {
@@ -49,7 +49,7 @@ $colors: (
 $base-fond-size: 1rem;
 
 $font-sizes: (
-  xxs:0.6154,
+  xxs: 0.6154,
   xs: 0.7692,
   sm: 0.9231,
   md: 1,
@@ -145,4 +145,10 @@ $spacing-sizes: (
       }
     }
   }
+}
+
+.bt {
+  border: none;
+  border-radius: 0.1538rem;
+  font-size: map-get($font-sizes, "sm" )* $base-fond-size;
 }
