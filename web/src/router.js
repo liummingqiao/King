@@ -13,6 +13,10 @@ export default new Router({
       path: '/',
       name: 'main',
       component: Main,
+      children: [{
+        path: '/', name: 'home', component: Home
+      }
+      ]
     },
     {
       path: '/about',
