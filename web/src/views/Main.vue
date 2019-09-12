@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="px-3 py-2 bg-black d-flex ai-center">
+    <div class="topbar px-3 py-2 bg-black d-flex ai-center">
       <img src="../assets/images/king.jpg" height="30" />
 
       <div class="px-2 flex-grow-1">
@@ -26,3 +26,10 @@
     <router-view></router-view>
   </div>
 </template>
+<style>
+.topbar{
+  position: sticky; 
+  top:0;
+  z-index:999;
+}
+</style>

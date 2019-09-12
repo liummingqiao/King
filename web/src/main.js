@@ -3,19 +3,20 @@ import App from './App.vue'
 // require styles
 import 'swiper/dist/css/swiper.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import Card from './components/Card.vue'
 
-
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+Vue.component('m-card',Card);
+Vue.use(VueAwesomeSwiper)
 
 
 Vue.config.productionTip = false
 
-<<<<<<< HEAD
 import './assets/scss/style.scss'
+import './assets/iconfont/iconfont.css'
 import router from './router'
-=======
-import './style.scss'  
->>>>>>> 548db64ba66b64eafedfc1073c23623a10e4c2de
+
+import './style.scss'
+
 
 new Vue({
   router,

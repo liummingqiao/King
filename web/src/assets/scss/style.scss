@@ -28,8 +28,8 @@ a {
 .flex-d {
   flex-direction: column;
 }
-.flex-grow-1 {
-  flex-grow: 1;
+.f-1 {
+  flex-grow:1;
 }
 .flex-wrap {
   flex-wrap: wrap;
@@ -64,6 +64,11 @@ a {
     width: 23px;
     height: 20px;
     background-position: 63.546% 15.517%;
+  }
+  &.sprite-up {
+    width: 10px;
+    height: 10px;
+    background-position:38.577% 52.076%;
   }
 }
 @each $colorKey, $color in $colors {

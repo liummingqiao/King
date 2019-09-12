@@ -36,7 +36,7 @@ module.exports = app => {
         await next()
     }, async (req, res) => {
 
-        const items = await req.Model.find().populate('parent').limit(10)
+        const items = await req.Model.find().populate('parent').limit(100)
         res.send(items)
     })
     router.get('/:id', async (req, res) => {
