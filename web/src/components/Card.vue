@@ -12,7 +12,7 @@
           v-for="(cardlists,i) in cardlist"
           :key="i"
           :class="{active:active===i}"
-          @click="active=i"
+          @click="$refs.list.swiper.slideTo(i)"
         >
           <div class="nav-link">{{cardlists.name}}</div>
         </div>
@@ -32,7 +32,11 @@
           <div class="nav-link">新闻</div>
         </div>-->
       </div>
-      <swiper>
+      <swiper
+        ref="list"
+        :options="{autoHeight:true}"
+        @slide-change="()=>active = $refs.list.swiper.realIndex"
+      >
         <swiper-slide v-for="(cardlists,i) in cardlist" :key="i">
           <slot name="item" :cardlists="cardlists"></slot>
         </swiper-slide>

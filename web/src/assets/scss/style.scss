@@ -34,6 +34,9 @@ a {
 .flex-wrap {
   flex-wrap: wrap;
 }
+.flex-wrap_no{
+  flex-wrap:nowrap
+}
 .w-100 {
   width: 100%;
 }
@@ -45,7 +48,16 @@ a {
   border-radius: 0.1538rem;
   font-size: map-get($font-sizes, "sm") * $base-fond-size;
 }
-
+.text-ellipsis{
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.text-hidden{
+  display: inline-block;
+  white-space: nowrap
+}
 
 .nav_all {
   .nav_item {
