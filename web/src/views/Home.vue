@@ -29,7 +29,7 @@
       <template #item="{cardlists}">
         <router-link
           tag="div"
-          :to="`/article/${cardcontent ._id}`"
+          :to="`/article/${cardcontent._id}`"
           class="ml-3 d-flex fs-lg py-2"
           v-for="(cardcontent,i) in cardlists.newslist"
           :key="i"
@@ -41,14 +41,21 @@
         </router-link>
       </template>
     </m-card>
-    <m-card icon="news" title="英雄列表" :cardlist="heroCard">
+    <m-card icon="fenlei-yingxionglianmeng
+" title="英雄列表" :cardlist="heroCard">
       <template #item="{cardlists}">
         <div class="d-flex flex-wrap" style="margin-left:1.7rem">
-          <div class="text-center p-2" style="width:18%" v-for="(hero,i) in cardlists.herolist" :key="i"
+          <router-link
+            tag="div"
+            :to="`/hero/${hero._id}`"
+            class="text-center p-2"
+            style="width:18%"
+            v-for="(hero,i) in cardlists.herolist"
+            :key="i"
           >
             <img :src="hero.avatar" class="w-100" />
             <div>{{hero.name}}</div>
-          </div>
+          </router-link>
         </div>
       </template>
     </m-card>

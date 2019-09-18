@@ -10,7 +10,8 @@ $colors: (
   "hui": #666,
   "blue_1":#edeff1,
   "grey-1":#f9f9f9,
-  "news":#464F73
+  "news":#464F73,
+  "article": #4394e4
 );
 
 $border-color: map-get($colors, "blue_1");
@@ -22,6 +23,7 @@ $font-sizes: (
   md: 1,
   lg: 1.0769,
   xg: 1.2308
+  
 );
 $at: (
   start: flex-start,

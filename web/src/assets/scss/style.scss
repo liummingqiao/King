@@ -21,6 +21,10 @@ body {
 a {
   color: #999;
 }
+p {
+  line-height: 1.9em;
+  
+}
 
 .d-flex {
   display: flex;
@@ -29,13 +33,13 @@ a {
   flex-direction: column;
 }
 .f-1 {
-  flex-grow:1;
+  flex-grow: 1;
 }
 .flex-wrap {
   flex-wrap: wrap;
 }
-.flex-wrap_no{
-  flex-wrap:nowrap
+.flex-wrap_no {
+  flex-wrap: nowrap;
 }
 .w-100 {
   width: 100%;
@@ -48,15 +52,15 @@ a {
   border-radius: 0.1538rem;
   font-size: map-get($font-sizes, "sm") * $base-fond-size;
 }
-.text-ellipsis{
+.text-ellipsis {
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap
+  white-space: nowrap;
 }
-.text-hidden{
+.text-hidden {
   display: inline-block;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .nav_all {
@@ -80,9 +84,10 @@ a {
   &.sprite-up {
     width: 10px;
     height: 10px;
-    background-position:38.577% 52.076%;
+    background-position: 38.577% 52.076%;
   }
 }
+
 @each $colorKey, $color in $colors {
   .text-#{$colorKey} {
     color: $color;
@@ -142,5 +147,10 @@ a {
         #{$type}-#{$direction}: $size * $spacing-base-size;
       }
     }
+  }
+}
+@each $dic in (left,right,top,bottom) {
+  .border-#{$dic}{
+     border-#{$dic}: 0.0769rem  solid #d4d4d5
   }
 }
