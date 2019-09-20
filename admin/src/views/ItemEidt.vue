@@ -17,8 +17,8 @@
           <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
       </el-form-item>
-      <el-form-item>
-        <el-button type="primary" native-type="submit">保存</el-button>
+      <el-form-item style="margin-bo:10px">
+        <el-button  type="primary" native-type="submit">保存</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -37,7 +37,7 @@ export default {
   methods: {
     afterUplode(res) {
       this.$set(this.model, 'icon', res.url);
-      console.log(res.url+"-----"+ this.model.icon)
+      // console.log(res.url+"-----"+ this.model.icon)
     },
     async save() {
       let res;

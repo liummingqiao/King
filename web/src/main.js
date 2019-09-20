@@ -20,7 +20,7 @@ import './style.scss'
 import axios from 'axios'
 
 Vue.prototype.$http = axios.create ({
-  baseURL:'http://localhost:3000/web/api'
+  baseURL: process.env.Vue_APP_API_URL || '/web/api',
 })
 
 new Vue({
